@@ -1,0 +1,444 @@
+/* ============================================================
+   Design tokens — light theme (default)
+   ============================================================ */
+:root {
+  /* Backgrounds */
+  --bg:            #f5f4f0;
+  --panel-bg:      #ffffff;
+  --header-bg:     #1a1a2e;
+
+  /* Text */
+  --text:          #1a1a1a;
+  --text-muted:    #5a5a6a;
+  --text-on-header:#e8e6f0;
+
+  /* Borders & decoration */
+  --border:        #d8d6d0;
+  --panel-shadow:  0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06);
+  --panel-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.10);
+
+  /* Accent / links */
+  --accent:        #4a3f9e;
+  --link:          #3d32a0;
+  --link-hover:    #1e1668;
+  --focus-ring:    #4a3f9e;
+  --btn-bg:        #4a3f9e;
+  --btn-text:      #ffffff;
+  --btn-hover-bg:  #3a2f8e;
+
+  /* Badge: Logseq CLI — teal/green */
+  --badge-cli-bg:  #d6f5ef;
+  --badge-cli-fg:  #0d5a47;
+
+  /* Badge: Logseq HTTP API — blue */
+  --badge-http-bg: #dceeff;
+  --badge-http-fg: #0d3d7a;
+
+  /* Badge: Logseq Plugin — violet */
+  --badge-plugin-bg: #ede8ff;
+  --badge-plugin-fg: #3d1f8a;
+
+  /* Badge: Standalone utility — amber */
+  --badge-standalone-bg: #fff3d4;
+  --badge-standalone-fg: #6b3d00;
+
+  /* Typography */
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-size-base: 1rem;
+  --line-height: 1.6;
+
+  /* Spacing */
+  --gap: 1.25rem;
+  --panel-padding: 1.5rem;
+  --radius: 0.625rem;
+  --max-width: 1200px;
+}
+
+/* ============================================================
+   Dark theme overrides
+   ============================================================ */
+[data-theme="dark"] {
+  --bg:            #0f0f14;
+  --panel-bg:      #1a1a24;
+  --header-bg:     #0a0a12;
+
+  --text:          #eeeaf8;
+  --text-muted:    #9990b8;
+  --text-on-header:#eeeaf8;
+
+  --border:        #2e2a40;
+  --panel-shadow:  0 1px 3px rgba(0, 0, 0, 0.40), 0 4px 12px rgba(0, 0, 0, 0.30);
+  --panel-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.50), 0 8px 24px rgba(0, 0, 0, 0.40);
+
+  --accent:        #8b7ff0;
+  --link:          #9b8ff8;
+  --link-hover:    #bbb0ff;
+  --focus-ring:    #9b8ff8;
+  --btn-bg:        #5a4fd4;
+  --btn-text:      #ffffff;
+  --btn-hover-bg:  #7060e8;
+
+  /* Badge: Logseq CLI — teal/green, dark */
+  --badge-cli-bg:  #0d3328;
+  --badge-cli-fg:  #4dd4ac;
+
+  /* Badge: Logseq HTTP API — blue, dark */
+  --badge-http-bg: #0a1f3d;
+  --badge-http-fg: #60aaff;
+
+  /* Badge: Logseq Plugin — violet, dark */
+  --badge-plugin-bg: #1a1040;
+  --badge-plugin-fg: #b49eff;
+
+  /* Badge: Standalone utility — amber, dark */
+  --badge-standalone-bg: #2a1800;
+  --badge-standalone-fg: #fbbf24;
+}
+
+/* ============================================================
+   Reset & base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* ============================================================
+   Focus visible
+   ============================================================ */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   Links
+   ============================================================ */
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* ============================================================
+   Site header
+   ============================================================ */
+.site-header {
+  background: var(--header-bg);
+  color: var(--text-on-header);
+  padding: 1.75rem 1rem;
+  border-bottom: 3px solid var(--accent);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.site-title {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.site-tagline {
+  margin-top: 0.35rem;
+  font-size: 0.9375rem;
+  color: var(--text-on-header);
+  opacity: 0.85;
+}
+
+.tagline-link {
+  color: var(--text-on-header);
+  opacity: 1;
+  font-weight: 600;
+}
+
+.tagline-link:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* ============================================================
+   Theme toggle
+   ============================================================ */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: var(--text-on-header);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
+}
+
+.toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ============================================================
+   Main content area
+   ============================================================ */
+main {
+  flex: 1;
+  padding: 2rem 1rem 3rem;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   Responsive grid — explicit breakpoints
+   ============================================================ */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+@media (min-width: 700px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================================
+   Panel / card
+   ============================================================ */
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--panel-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: var(--panel-shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.panel:hover {
+  box-shadow: var(--panel-shadow-hover);
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.panel-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.panel-description {
+  font-size: 0.9375rem;
+  color: var(--text);
+  line-height: 1.65;
+  max-width: 55ch;
+  flex: 1;
+}
+
+/* ============================================================
+   Integration badge
+   ============================================================ */
+.badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.badge-prefix {
+  /* visually hidden but read by screen readers */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.2em 0.65em;
+  border-radius: 1rem;
+  line-height: 1.5;
+}
+
+.badge--cli {
+  background: var(--badge-cli-bg);
+  color: var(--badge-cli-fg);
+}
+
+.badge--http {
+  background: var(--badge-http-bg);
+  color: var(--badge-http-fg);
+}
+
+.badge--plugin {
+  background: var(--badge-plugin-bg);
+  color: var(--badge-plugin-fg);
+}
+
+.badge--standalone {
+  background: var(--badge-standalone-bg);
+  color: var(--badge-standalone-fg);
+}
+
+/* ============================================================
+   Panel meta lines
+   ============================================================ */
+.panel-runtime {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.panel-runtime::before {
+  content: '⚙';
+  opacity: 0.6;
+  font-size: 0.75rem;
+}
+
+.panel-updated {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.panel-updated::before {
+  content: '↻';
+  opacity: 0.6;
+  font-size: 0.875rem;
+}
+
+.panel-updated time {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   Repo button / link
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 0.375rem;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: background 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--btn-hover-bg);
+  color: var(--btn-text);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.btn-icon {
+  font-size: 0.8125rem;
+  opacity: 0.85;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.site-footer a {
+  color: var(--link);
+}
+
+/* ============================================================
+   Loading state note (non-blocking)
+   ============================================================ */
+#footer-date-note {
+  font-style: italic;
+  font-size: 0.8125rem;
+}

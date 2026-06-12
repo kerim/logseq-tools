@@ -1,0 +1,65 @@
+[
+  {
+    "name": "raycast-logseq-search",
+    "title": "Raycast Logseq Search",
+    "repo": "https://github.com/kerim/raycast-logseq-search",
+    "description": "Search your Logseq DB graphs straight from Raycast — real-time results as you type, a graph picker, and deep links that open the page back in Logseq.",
+    "integration": "Logseq CLI",
+    "runtime": "Raycast extension · TypeScript",
+    "fallbackUpdated": "2026-06-12"
+  },
+  {
+    "name": "logseq-reminders-sync",
+    "title": "Logseq Reminders Sync",
+    "repo": "https://github.com/kerim/logseq-reminders-sync",
+    "description": "Two-way sync between prioritized Logseq tasks and Apple Reminders — completion, status, priority and due dates stay in step, with Logseq as the source of truth.",
+    "integration": "Logseq CLI",
+    "runtime": "macOS command-line tool · Swift",
+    "fallbackUpdated": "2026-06-06"
+  },
+  {
+    "name": "logseq-db-query-builder",
+    "title": "Logseq DB Query Builder",
+    "repo": "https://github.com/kerim/logseq-db-query-builder",
+    "description": "A visual, point-and-click query builder for Logseq DB graphs, with nested filter groups and boolean logic — no Datalog by hand.",
+    "integration": "Logseq HTTP API",
+    "runtime": "Static web app · vanilla JS",
+    "fallbackUpdated": "2026-05-31"
+  },
+  {
+    "name": "logseq-checklist",
+    "title": "Logseq Checklist",
+    "repo": "https://github.com/kerim/logseq-checklist",
+    "description": "A Logseq plugin that automatically adds live progress indicators to checklist blocks as you tick items off.",
+    "integration": "Logseq Plugin",
+    "runtime": "Logseq plugin · TypeScript",
+    "fallbackUpdated": "2026-01-21"
+  },
+  {
+    "name": "logseq-zotero-sync",
+    "title": "Logseq → Zotero Sync",
+    "repo": "https://github.com/kerim/logseq-zotero-sync",
+    "description": "Tags any Zotero item that's referenced from a #zotero page in your graph, keeping your reference library and your notes in sync. Idempotent and safe to re-run.",
+    "integration": "Logseq CLI",
+    "runtime": "Python · Claude Code skill",
+    "fallbackUpdated": "2026-01-20"
+  },
+  {
+    "name": "logseq-http-server",
+    "title": "Logseq HTTP Server",
+    "repo": "https://github.com/kerim/logseq-http-server",
+    "description": "A small local server that exposes the Logseq CLI over HTTP, so other tools — like the browser extension — can query your graph without their own CLI setup.",
+    "integration": "Logseq CLI",
+    "runtime": "Python · standard library only",
+    "fallbackUpdated": "2025-12-16"
+  },
+  {
+    "name": "logseq-updater",
+    "title": "Logseq Updater",
+    "repo": "https://github.com/kerim/logseq-updater",
+    "description": "Automatically checks GitHub Actions for the latest Logseq development build and installs it, with version comparison and resumable downloads.",
+    "integration": "Standalone utility",
+    "runtime": "Fish shell · GitHub CLI",
+    "fallbackUpdated": "2025-11-05"
+  }
+]

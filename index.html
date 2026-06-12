@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logseq Tools — P. Kerim Friedman</title>
+  <meta name="description" content="Seven open-source tools that extend Logseq DB graphs — search, sync, query, and more.">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var theme = stored
+        ? stored
+        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-text">
+        <h1 class="site-title">Logseq Tools</h1>
+        <p class="site-tagline">Open-source extensions for <a href="https://logseq.com/" rel="noopener" class="tagline-link">Logseq DB</a> graphs by <a href="https://github.com/kerim" rel="noopener" class="tagline-link">kerim</a></p>
+      </div>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-pressed="false"
+        aria-label="Switch to dark mode"
+        type="button"
+      >
+        <span class="toggle-icon" aria-hidden="true"></span>
+        <span class="toggle-label"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="grid" class="project-grid" aria-label="Logseq tools">
+      <!-- panels injected by app.js -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built by <a href="https://github.com/kerim" rel="noopener">P. Kerim Friedman</a> · <span id="footer-date-note">Last-updated dates fetched live from GitHub</span></p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
