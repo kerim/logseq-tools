@@ -27,6 +27,15 @@
     "fallbackUpdated": "2026-05-31"
   },
   {
+    "name": "spellbook",
+    "title": "Logseq Spellbook",
+    "repo": "https://github.com/kerim/spellbook",
+    "description": "A Claude Code plugin marketplace of Logseq skills — teaches Claude to drive the Logseq CLI and build Logseq DB graph plugins, installable straight into Claude Code.",
+    "integration": "Logseq CLI",
+    "runtime": "Claude Code plugin marketplace · skills",
+    "fallbackUpdated": "2026-05-18"
+  },
+  {
     "name": "logseq-checklist",
     "title": "Logseq Checklist",
     "repo": "https://github.com/kerim/logseq-checklist",
