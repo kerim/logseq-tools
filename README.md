@@ -1,6 +1,6 @@
 # Logseq Tools
 
-A single-page showcase of eight open-source tools for [Logseq DB](https://logseq.com) graphs, built by [P. Kerim Friedman](https://github.com/kerim).
+A single-page showcase of nine open-source tools for [Logseq DB](https://logseq.com) graphs, built by [P. Kerim Friedman](https://github.com/kerim).
 
 Live at: **https://kerim.github.io/logseq-tools/**
 
@@ -22,7 +22,7 @@ Features:
 | `index.html` | Page shell — header, grid container, footer |
 | `styles.css` | All styling — CSS custom properties, grid, badges, themes |
 | `app.js` | Renders panels, fetches live dates, wires theme toggle |
-| `projects.json` | The eight projects (source of truth for panel content) |
+| `projects.json` | The nine projects (source of truth for panel content) |
 
 ## Run locally
 
