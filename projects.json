@@ -1,5 +1,14 @@
 [
   {
+    "name": "logseq-history-timeline-plugin",
+    "title": "Logseq Timeline Plugin",
+    "repo": "https://github.com/kerim/logseq-history-timeline-plugin",
+    "description": "Turn #tl-tagged nodes into an interactive, zoomable historical timeline — filter by topic and type, pan and zoom from BCE to now, click an item to jump straight back to its node.",
+    "integration": "Logseq Plugin",
+    "runtime": "Logseq plugin · TypeScript",
+    "fallbackUpdated": "2026-07-25"
+  },
+  {
     "name": "raycast-logseq-search",
     "title": "Raycast Logseq Search",
     "repo": "https://github.com/kerim/raycast-logseq-search",
