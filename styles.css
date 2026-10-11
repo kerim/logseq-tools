@@ -42,6 +42,9 @@
   --badge-standalone-bg: #fff3d4;
   --badge-standalone-fg: #6b3d00;
 
+  --badge-resource-bg: #ffe3ea;
+  --badge-resource-fg: #7a0d33;
+
   /* Typography */
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-size-base: 1rem;
@@ -93,6 +96,9 @@
   /* Badge: Standalone utility — amber, dark */
   --badge-standalone-bg: #2a1800;
   --badge-standalone-fg: #fbbf24;
+
+  --badge-resource-bg: #3a0d1c;
+  --badge-resource-fg: #ff9db8;
 }
 
 /* ============================================================
@@ -346,6 +352,11 @@ main {
 .badge--standalone {
   background: var(--badge-standalone-bg);
   color: var(--badge-standalone-fg);
+}
+
+.badge--resource {
+  background: var(--badge-resource-bg);
+  color: var(--badge-resource-fg);
 }
 
 /* ============================================================

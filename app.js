@@ -18,7 +18,8 @@
     'Logseq CLI':       'badge--cli',
     'Logseq HTTP API':  'badge--http',
     'Logseq Plugin':    'badge--plugin',
-    'Standalone utility': 'badge--standalone'
+    'Standalone utility': 'badge--standalone',
+    'Community resource': 'badge--resource'
   };
 
   /* ----------------------------------------------------------
@@ -91,17 +92,18 @@
     // Repo link button
     var link = document.createElement('a');
     link.className = 'btn';
-    link.href = project.repo;
+    // Entries with a "url" (e.g. a website) link there instead of to the repo
+    link.href = project.url || project.repo;
     link.target = '_blank';
     link.rel = 'noopener';
-    link.setAttribute('aria-label', 'Open ' + project.title + ' on GitHub');
+    link.setAttribute('aria-label', project.url ? 'Visit ' + project.title : 'Open ' + project.title + ' on GitHub');
 
     var btnIcon = document.createElement('span');
     btnIcon.className = 'btn-icon';
     btnIcon.setAttribute('aria-hidden', 'true');
     btnIcon.textContent = '↗';
 
-    var btnText = document.createTextNode('View on GitHub');
+    var btnText = document.createTextNode(project.url ? 'Visit site' : 'View on GitHub');
     link.appendChild(btnIcon);
     link.appendChild(btnText);
 

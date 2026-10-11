@@ -1,6 +1,6 @@
 # Logseq Tools
 
-A single-page showcase of nine open-source tools for [Logseq DB](https://logseq.com) graphs, built by [P. Kerim Friedman](https://github.com/kerim).
+A single-page showcase of ten open-source tools and resources for [Logseq DB](https://logseq.com) graphs, built by [P. Kerim Friedman](https://github.com/kerim).
 
 Live at: **https://kerim.github.io/logseq-tools/**
 
@@ -12,7 +12,7 @@ Features:
 
 - Responsive grid: 1 column on phones, 2 on tablets (≥700 px), 3 on desktop (≥1100 px)
 - High-contrast light and dark themes; toggles with a button, persists to `localStorage`, falls back to OS preference
-- Integration type badges (Logseq CLI / Logseq HTTP API / Logseq Plugin / Standalone utility) — labeled in text, not color alone
+- Integration type badges (Logseq CLI / Logseq HTTP API / Logseq Plugin / Standalone utility / Community resource) — labeled in text, not color alone
 - Accessible: semantic landmarks, visible focus rings, `aria-label` on all interactive elements, WCAG-AA contrast in both themes
 
 ## Files
@@ -22,7 +22,7 @@ Features:
 | `index.html` | Page shell — header, grid container, footer |
 | `styles.css` | All styling — CSS custom properties, grid, badges, themes |
 | `app.js` | Renders panels, fetches live dates, wires theme toggle |
-| `projects.json` | The nine projects (source of truth for panel content) |
+| `projects.json` | The ten projects (source of truth for panel content) |
 
 ## Run locally
 
@@ -70,6 +70,8 @@ Edit `projects.json`. Each entry has these fields:
 }
 ```
 
-Valid `integration` values: `Logseq CLI`, `Logseq HTTP API`, `Logseq Plugin`, `Standalone utility`.
+Valid `integration` values: `Logseq CLI`, `Logseq HTTP API`, `Logseq Plugin`, `Standalone utility`, `Community resource`.
+
+Optional: add `"url": "https://…"` for an entry that is a website rather than code. Its button then reads "Visit site" and opens that address instead of the repo; `name` and `repo` are still used to fetch the last-updated date.
 
 Update `fallbackUpdated` whenever you make a significant change, so offline visitors see a reasonable date.

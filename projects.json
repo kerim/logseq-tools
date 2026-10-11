@@ -1,5 +1,15 @@
 [
   {
+    "name": "logseq-faq",
+    "title": "Unofficial Logseq FAQ",
+    "repo": "https://github.com/kerim/logseq-faq",
+    "url": "https://kerim.github.io/logseq-faq/",
+    "description": "A community-built FAQ for Logseq — Answers questions about recent changes to Logseq, how to set up sync, and where to go for more information.",
+    "integration": "Community resource",
+    "runtime": "Website · published from a Logseq DB graph",
+    "fallbackUpdated": "2026-09-22"
+  },
+  {
     "name": "logseq-history-timeline-plugin",
     "title": "Logseq Timeline Plugin",
     "repo": "https://github.com/kerim/logseq-history-timeline-plugin",
